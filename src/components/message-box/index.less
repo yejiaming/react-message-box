@@ -1,0 +1,130 @@
+@gray: #A3A4A6;
+@red: #F25643;
+@blue: #3296FA;
+@orange: #FF943E;
+@title: #191F25;
+@green: #15BC83;
+@lineLeve2: #F6F6F6;
+@lineLeve1: #EDEDED;
+.m-messagebox-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; // confirm弹窗
+}
+
+// alert/confirm组件
+.m-confirm,
+.m-alert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 85%;
+  border-radius: 6px;
+  font-size: 16px;
+  -webkit-user-select: none;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: .2s;
+  .m-msgbox-header {
+    padding: 30px 0 0;
+  }
+  .m-msgbox-title {
+    color: @title;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 34px;
+    font-weight: 700;
+  }
+  .m-msgbox-content {
+    padding: 20px 40px 30px;
+    min-height: 72px;
+    position: relative;
+  }
+  .m-msgbox-message {
+    color: @gray;
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+    line-height: 36px;
+    word-break: break-all;
+  }
+  .m-msgbox-btn {
+    width: 100%;
+    position: relative;
+    &::before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      border-top: 1px solid #DCDEE3;
+      box-sizing: border-box;
+      color: #DCDEE3;
+      transform-origin: 0 0;
+      transform: scaleY(0.5);
+    }
+    display: flex;
+    align-items: center;
+    height: 94px;
+  }
+  .m-confirm-btn,
+  .m-cancel-btn {
+    flex: 1;
+    text-align: center;
+    font-size: 34px;
+  }
+  .m-cancel-btn {
+    color: @blue;
+    position: relative;
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 1px;
+      height: 48px;
+      content: '';
+      display: inline-block;
+      background: #DCDEE3;
+      transform: translateY(-50%) scaleX(0.5);
+    }
+  }
+  .m-confirm-btn {
+    color: @blue;
+    &.disable {
+      opacity: 0.5;
+    }
+  }
+}
+
+// toast组件
+.m-toast {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  min-width: 240px;
+  border-radius: 20px;
+  font-size: 16px;
+  -webkit-user-select: none;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: .2s;
+  padding: 36px 10px;
+  text-align: center;
+  color: #fff;
+  .gou {
+    color: #fff;
+    font-size: 100px;
+  }
+  .m-content {
+    font-size: 30px;
+    word-break: break-all;
+  }
+}
