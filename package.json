@@ -1,6 +1,6 @@
 {
   "name": "react-msg-box",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "该react组件包含：alert、confirm、toast三个弹窗组件，并且包含custom自定义组件，支持多层级弹窗形式",
   "repository": {
     "type": "git",
