@@ -1,4 +1,10 @@
 # MessageBox 弹窗组件
+## 安装
+
+```bash
+npm i -S react-msg-box
+```
+
 ## 参数说明
 
 ```js
