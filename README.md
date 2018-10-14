@@ -27,7 +27,7 @@ export const DEFAULT_PROP = {
 }
 ```
 
-## 用法1：使用 JS 方法调用的方式
+## 用法1：使用 JS 方式调用
 
 ```jsx
 import { MessageBox } from 'react-msg-box';
